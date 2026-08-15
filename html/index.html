@@ -1,0 +1,469 @@
+<link rel="stylesheet" href="../css/style.css">
+
+<section style="
+    position: relative;
+    width: 90%;
+    margin: 40px auto 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 15px 15px 0 0;
+">
+
+    <!-- ==================== BORDER ==================== -->
+
+    <div style="
+        position: absolute;
+        inset: 0;
+        border: 2px solid white;
+        border-bottom: none;
+        border-radius: 15px 15px 0 0;
+        pointer-events: none;
+        mask-image: linear-gradient(
+            to bottom,
+            black 0%,
+            black 50%,
+            transparent 90%
+        );
+        -webkit-mask-image: linear-gradient(
+            to bottom,
+            black 0%,
+            black 40%,
+            transparent 90%
+        );
+    "></div>
+
+
+    <!-- ==================== LOGO & TITLE ==================== -->
+
+    <div style="
+        position: relative;
+        width: 100%;
+        height: 80px;
+    ">
+
+        <img
+            src="../images/logo.png"
+            alt="Bank Direct Debits logo"
+            style="
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100px;
+                height: 80px;
+                object-fit: contain;
+            "
+        >
+        <div style="
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(to right, #2563eb, #e39b00);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        "></div>
+
+        <h1 style="
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            margin: 0;
+            line-height: 80px;
+        ">
+            Bank Direct Debits
+        </h1>
+
+        <div style="
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(to right, #2563eb, #e39b00);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        "></div>
+    </div>
+
+
+    <!-- ==================== HEADER ==================== -->
+
+    <header>
+
+        <h2 id="angelcourt" style="
+            margin-top: 20px;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 50px;
+            color: white;
+            width: 100%;
+            text-align: center;
+        ">
+            Small Payments. Big Bank Rewards!
+        </h2>
+
+
+        <!-- ==================== PAYMENT OPTIONS ==================== -->
+
+        <div style="
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 100px;
+            flex-wrap: wrap;
+            margin-top: 100px;
+        ">
+
+            <!-- CENTRE TEXT -->
+
+            <p style="
+                position: absolute;
+                top: -25px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                margin: 0;
+                color: white;
+                font-size: 20px;
+                text-align: center;
+                z-index: 2;
+            ">
+                Setup Card Payments and Direct Debits
+            </p>
+
+
+            <!-- ==================== SINGLE PAYMENT ==================== -->
+
+            <section style="
+                position: relative;
+                text-align: center;
+                padding: 20px;
+                background: linear-gradient(
+                    to bottom,
+                    #2563eb 0%,
+                    #fff 100%
+                );
+                width: 20%;
+                min-width: 320px;
+                height: 250px;
+                border-radius: 8px;
+            ">
+
+                <div style="
+                    position: absolute;
+                    top: -25px;
+                    left: 0;
+                    background: #2563eb;
+                    border: 1px solid #2563eb;
+                    border-bottom: none;
+                    border-radius: 8px 8px 0 0;
+                    padding: 6px 16px;
+                    font-weight: bold;
+                    color: white;
+                ">
+                    Single Payment
+                </div>
+
+
+                <!-- STRIPE -->
+
+                <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1U2bnqQtxen1LEv89mJ3jNvH"
+                    publishable-key="pk_live_51U2VqIQtxen1LEv81ehT0e5xR0VqTa3RqtxtTrOronVFNuGNlFB45hQchmYQ8jN0fhsZF6KLxv6r9Myf9SxHH3qX00rtAoyRbw">
+                </stripe-buy-button>
+
+            </section>
+
+
+            <!-- ==================== RECURRING PAYMENT ==================== -->
+
+            <section style="
+                position: relative;
+                text-align: center;
+                border-radius: 8px;
+                padding: 20px;
+                background: linear-gradient(
+                    to bottom,
+                    #e39b00 0%,
+                    #fff 100%
+                );
+                width: 20%;
+                min-width: 320px;
+                height: 250px;
+            ">
+
+                <div style="
+                    position: absolute;
+                    top: -25px;
+                    right: 0;
+                    background: #e39b00;
+                    border: 1px solid #e39b00;
+                    border-bottom: none;
+                    border-radius: 8px 8px 0 0;
+                    padding: 6px 16px;
+                    font-weight: bold;
+                    color: white;
+                ">
+                    Recurring Payment
+                </div>
+
+
+                <!-- INNER WHITE BOX -->
+
+                <section style="
+                    background-color: #fff;
+                    border-radius: 8px;
+                    width: 90%;
+                    height: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    text-align: center;
+                ">
+
+                    <!-- PAYMENT 1 -->
+
+                    <div style="
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: scale(0.95);
+                    ">
+
+                        <stripe-buy-button
+                            buy-button-id="buy_btn_1U2cteQtxen1LEv86lpVse61"
+                            publishable-key="pk_live_51U2VqIQtxen1LEv81ehT0e5xR0VqTa3RqtxtTrOronVFNuGNlFB45hQchmYQ8jN0fhsZF6KLxv6r9Myf9SxHH3qX00rtAoyRbw">
+                        </stripe-buy-button>
+
+                    </div>
+
+
+                    <!-- PAYMENT 2 -->
+
+                    <div style="
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: scale(0.95);
+                    ">
+
+                        <stripe-buy-button
+                            buy-button-id="buy_btn_1U3JtPQtxen1LEv8oC5uVlll"
+                            publishable-key="pk_live_51U2VqIQtxen1LEv81ehT0e5xR0VqTa3RqtxtTrOronVFNuGNlFB45hQchmYQ8jN0fhsZF6KLxv6r9Myf9SxHH3qX00rtAoyRbw">
+                        </stripe-buy-button>
+
+                    </div>
+
+
+                    <!-- PAYMENT 3 -->
+
+                    <div style="
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: scale(0.95);
+                    ">
+
+                        <stripe-buy-button
+                            buy-button-id="buy_btn_1U3JvjQtxen1LEv8ovSykJDB"
+                            publishable-key="pk_live_51U2VqIQtxen1LEv81ehT0e5xR0VqTa3RqtxtTrOronVFNuGNlFB45hQchmYQ8jN0fhsZF6KLxv6r9Myf9SxHH3qX00rtAoyRbw">
+                        </stripe-buy-button>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </div>
+
+
+        <!-- ==================== CANCEL MESSAGE ==================== -->
+
+        <p style="
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            margin: 35px 0 0;
+        ">
+            Change your mind &#8594; Cancel anytime
+        </p>
+
+    </header>
+
+
+    <!-- ==================== INFORMATION SECTION ==================== -->
+
+    <div style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 90%;
+        max-width: 1200px;
+        margin: 60px auto 40px;
+    ">
+
+
+        <!-- ==================== DIRECT DEBIT ==================== -->
+
+        <div style="
+            width: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px 30px;
+            box-sizing: border-box;
+            border-radius: 15px;
+            border-left: 6px solid #2563eb;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+        ">
+
+            <h2 style="
+                margin: 0 0 8px 0;
+                color: #222;
+                font-family: Arial, sans-serif;
+                font-size: 22px;
+            ">
+                What is a Direct Debit?
+            </h2>
+
+            <p style="
+                color: #444;
+                line-height: 1.4;
+                font-family: Arial, sans-serif;
+                margin: 5px 0;
+            ">
+                <i>
+                    A Direct Debit is an automated way for an organisation
+                    to collect payments directly from your bank account.
+                </i>
+            </p>
+
+            <p style="
+                color: #555;
+                line-height: 1.4;
+                font-family: Arial, sans-serif;
+                margin: 5px 0;
+            ">
+                <i>
+                    You give an organisation permission to request payments
+                    from your bank account through a Direct Debit Instruction.
+                </i>
+            </p>
+
+            <p style="
+                color: #555;
+                line-height: 1.4;
+                font-family: Arial, sans-serif;
+                margin: 5px 0 12px;
+            ">
+                <i>
+                    If something goes wrong with the collection of your
+                    Direct Debit, you may be protected by the Direct Debit Guarantee.
+                </i>
+            </p>
+
+            <a
+                href="https://www.directdebit.co.uk/"
+                style="
+                    display: inline-block;
+                    background: #2563eb;
+                    color: white;
+                    padding: 9px 20px;
+                    border-radius: 7px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-family: Arial, sans-serif;
+                    align-self: flex-start;
+                "
+            >
+                Learn more →
+            </a>
+
+        </div>
+
+
+        <!-- ==================== CARD PAYMENTS ==================== -->
+
+        <div style="
+            width: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px 30px;
+            box-sizing: border-box;
+            border-radius: 15px;
+            border-left: 6px solid #e39b00;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+        ">
+
+            <h2 style="
+                margin: 0 0 8px 0;
+                color: #222;
+                font-family: Arial, sans-serif;
+                font-size: 22px;
+            ">
+                How do Card Payments work?
+            </h2>
+
+            <p style="
+                color: #444;
+                line-height: 1.4;
+                font-family: Arial, sans-serif;
+                margin: 5px 0;
+            ">
+                <i>
+                    When you pay by card, your card provides information
+                    about the purchase to the card reader or payment system.
+                </i>
+            </p>
+
+            <p style="
+                color: #555;
+                line-height: 1.4;
+                font-family: Arial, sans-serif;
+                margin: 5px 0;
+            ">
+                <i>
+                    The card network communicates with your bank and the
+                    business receiving the payment to process the transaction.
+                </i>
+            </p>
+
+            <p style="
+                color: #555;
+                line-height: 1.4;
+                font-family: Arial, sans-serif;
+                margin: 5px 0 12px;
+            ">
+                <i>
+                    The transaction is then settled between the relevant banks,
+                    allowing the business to receive the money.
+                </i>
+            </p>
+
+            <a
+                href="https://www.bankofengland.co.uk/explainers/how-do-card-payments-work"
+                style="
+                    display: inline-block;
+                    background: #e39b00;
+                    color: white;
+                    padding: 9px 20px;
+                    border-radius: 7px;
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-family: Arial, sans-serif;
+                    align-self: flex-start;
+                "
+            >
+                Learn more →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
